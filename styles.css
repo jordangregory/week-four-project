@@ -24,3 +24,16 @@ body {
   width: 100%;
   margin: 2rem;
 }
+
+.results {
+  display: flex;
+  /*flex-wrap: wrap;*/
+}
+
+.songTitle, .artistName, .albumCover {
+  flex: 1 33%;
+}
+.albumCover {
+  height: 50px;
+  width: 50px;
+}

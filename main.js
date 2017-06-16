@@ -3,12 +3,12 @@
 */
 
 // 1. First select and store the elements you'll be working with
-var container = document.querySelector("container");
-var player = document.querySelector("player");
-var musicPLayer = document.querySelector("music-player");
-var search = document.querySelector("search");
-var searchForm = document.querySelector("search-form");
-var results = document.querySelector("results");
+var container = document.querySelector(".container");
+var player = document.querySelector(".player");
+var musicPLayer = document.querySelector(".music-player");
+var search = document.querySelector(".search");
+var searchForm = document.querySelector(".search-form");
+var results = document.querySelector(".results");
 
 const BASE_URL = "https://api.soundcloud.com/tracks/";
 const BASE_QUERY = "?q=";
@@ -37,8 +37,33 @@ function getMusic() {
 // 4. Create a way to append the fetch results to your page
 
 function createTrackProfile(trackConfig) {
+  console.log("hey");
   var profile = document.createElement("div");
   profile.classList.add("profile");
   results.appendChild(profile);
+
+  var songTitle = document.createElement("div");
+  songTitle.classList.add("songTitle");
+  songTitle.textContent = trackConfig.title;
+  results.appendChild(songTitle);
+
+  var artistName = document.createElement("div");
+  artistName.classList.add("artistName");
+  artistName.textContent = trackConfig.user.username;
+  results.appendChild(artistName);
+
+  var artwork = document.createElement("div");
+  artwork.classList.add("albumCover");
+  artwork.style.background =
+    "url(" + trackConfig.artwork_url + ") no-repeat center center";
+  artwork.style.backgroundSize = "cover";
+  results.appendChild(artwork);
 }
-// 5. Create a way to listen for a click that will play the song in the audio play
+// // 5. Create a way to listen for a click that will play the song in the audio play
+
+// var profilePic = document.createElement("div");
+// profilePic.classList.add("profilePic");
+// profilePic.style.background =
+//   "url(" + personConfig.picture.large + ") no-repeat center center";
+// profilePic.style.backgroundSize = "cover";
+// profile.appendChild(profilePic);
