@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>SoundCloud Music Search</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -14,11 +16,14 @@
     </section>
     <section class="search">
       <form class="search-form">
-        
+        <input type="text" id="inputArea" placeholder="Search for your favorite artist!">
+        <button id="searchSubmit">Search</button>
       </form>
     </section>
     <section class="results"></section>
   </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

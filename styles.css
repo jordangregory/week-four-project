@@ -3,5 +3,24 @@ header {
 }
 
 body {
-  background-color: #60d9f1;
+  background-color: gray;
+}
+
+.music-player {
+  width: 100%;
+  border-bottom: 1px solid black;
+  padding-bottom: 3rem;
+}
+
+.search-form {
+  padding-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#inputArea {
+  flex: 1 75%;
+  height: 40px;
+  width: 100%;
+  margin: 2rem;
 }
