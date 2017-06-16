@@ -4,6 +4,8 @@ header {
 
 body {
   background-color: gray;
+  /*background-image: url("/Users/jordangregory/Desktop/soundCloudprojectpic.jpg")
+    no-repeat;*/
 }
 
 .music-player {
@@ -19,21 +21,44 @@ body {
 }
 
 #inputArea {
-  flex: 1 75%;
-  height: 40px;
+  flex: 1 60%;
+  height: 34px;
   width: 100%;
-  margin: 2rem;
+  margin-top: 20px;
 }
 
+#searchSubmit {
+  height: 40px;
+  margin-top: 20px;
+  padding: 1rem;
+}
 .results {
   display: flex;
-  /*flex-wrap: wrap;*/
+  flex-flow: row wrap;
+  max-height: 100%;
+  background: white;
+  margin-top: 2rem;
 }
 
-.songTitle, .artistName, .albumCover {
-  flex: 1 33%;
+.profile {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 25%;
+  align-items: center;
+  /*border: 2px solid green;*/
 }
+
+.songTitle {
+  height: 3rem;
+  /*border: 2px solid green;*/
+}
+
+.artistName {
+  height: 3rem;
+  /*border: 2px solid green;*/
+}
+
 .albumCover {
-  height: 50px;
-  width: 50px;
+  height: 150px;
+  width: 150px;
 }

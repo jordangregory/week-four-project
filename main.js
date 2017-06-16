@@ -42,22 +42,22 @@ function createTrackProfile(trackConfig) {
   profile.classList.add("profile");
   results.appendChild(profile);
 
-  var songTitle = document.createElement("div");
-  songTitle.classList.add("songTitle");
-  songTitle.textContent = trackConfig.title;
-  results.appendChild(songTitle);
-
-  var artistName = document.createElement("div");
-  artistName.classList.add("artistName");
-  artistName.textContent = trackConfig.user.username;
-  results.appendChild(artistName);
-
   var artwork = document.createElement("div");
   artwork.classList.add("albumCover");
   artwork.style.background =
     "url(" + trackConfig.artwork_url + ") no-repeat center center";
   artwork.style.backgroundSize = "cover";
-  results.appendChild(artwork);
+  profile.appendChild(artwork);
+
+  var songTitle = document.createElement("div");
+  songTitle.classList.add("songTitle");
+  songTitle.textContent = trackConfig.title;
+  profile.appendChild(songTitle);
+
+  var artistName = document.createElement("div");
+  artistName.classList.add("artistName");
+  artistName.textContent = trackConfig.user.username;
+  profile.appendChild(artistName);
 }
 // // 5. Create a way to listen for a click that will play the song in the audio play
 
