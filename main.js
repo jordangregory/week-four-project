@@ -13,9 +13,19 @@ var results = document.querySelector(".results");
 const BASE_URL = "https://api.soundcloud.com/tracks/";
 const BASE_QUERY = "?q=";
 const API_KEY = "&client_id=8538a1744a7fdaa59981232897501e04";
+const CLIENT_ID = "client_id=8538a1744a7fdaa59981232897501e04";
 
 // 2. Create your `onSubmit` event for getting the user's search term
 document.querySelector("#searchSubmit").addEventListener("click", getMusic);
+
+const attachListener = function() {
+  document.getElementById("results").addEventListener("click", function(e) {
+      const targetElement = event.target;
+      const profile = targetElement.closest(".profile");
+      musicPLayer.setAttribute("src", profile.getAttribute("url"));
+    // }
+  });
+};
 
 // 3. Create your `fetch` request that is called after a submission
 function getMusic() {
@@ -32,6 +42,7 @@ function getMusic() {
     // call createTrackProfile with each track
     console.log(trackSelected);
   });
+  attachListener();
 }
 
 // 4. Create a way to append the fetch results to your page
@@ -58,12 +69,7 @@ function createTrackProfile(trackConfig) {
   artistName.classList.add("artistName");
   artistName.textContent = trackConfig.user.username;
   profile.appendChild(artistName);
+
+  profile.setAttribute("url", trackConfig.stream_url + "?" + CLIENT_ID);
 }
 // // 5. Create a way to listen for a click that will play the song in the audio play
-
-// var profilePic = document.createElement("div");
-// profilePic.classList.add("profilePic");
-// profilePic.style.background =
-//   "url(" + personConfig.picture.large + ") no-repeat center center";
-// profilePic.style.backgroundSize = "cover";
-// profile.appendChild(profilePic);
