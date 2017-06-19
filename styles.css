@@ -1,64 +1,74 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
 header {
   text-align: center;
+  font-family: sans-serif;
+  color: red;
 }
 
 body {
   background-color: gray;
-  /*background-image: url("/Users/jordangregory/Desktop/soundCloudprojectpic.jpg")
-    no-repeat;*/
+  background-image: url("soundCloudprojectpic.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .music-player {
-  width: 100%;
-  border-bottom: 1px solid black;
+  width: 50%;
   padding-bottom: 3rem;
+  margin: 0 0 0 350px;
 }
 
-.search-form {
-  padding-top: 3rem;
+.search {
   display: flex;
   flex-wrap: wrap;
 }
+.search-form {
+  display: flex;
+}
 
 #inputArea {
-  flex: 1 60%;
-  height: 34px;
-  width: 100%;
-  margin-top: 20px;
+  flex: 1 50%;
+  margin: 0 0 0 350px;
 }
 
 #searchSubmit {
-  height: 40px;
-  margin-top: 20px;
-  padding: 1rem;
+ padding: 10px;
+ border: none;
 }
+
+/* RESULT AREA */
+
 .results {
   display: flex;
   flex-flow: row wrap;
-  max-height: 100%;
-  background: white;
   margin-top: 2rem;
+  box-sizing: border-box;
 }
 
 .profile {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1 25%;
   align-items: center;
-  /*border: 2px solid green;*/
+  
 }
 
 .songTitle {
-  height: 3rem;
-  /*border: 2px solid green;*/
+  height: 20px;
+  color: white;
+  text-transform: uppercase;
 }
 
 .artistName {
-  height: 3rem;
-  /*border: 2px solid green;*/
+  height: 20px;
+  color: white;
+  text-transform: uppercase;
 }
 
 .albumCover {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
 }
