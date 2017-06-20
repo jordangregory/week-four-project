@@ -5,14 +5,15 @@ html {
 
 header {
   text-align: center;
-  font-family: sans-serif;
-  color: red;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #F2E9F3;
 }
 
 body {
   background-color: gray;
   background-image: url("soundCloudprojectpic.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
   height: 100%;
   width: 100%;
 }
@@ -33,42 +34,62 @@ body {
 
 #inputArea {
   flex: 1 50%;
-  margin: 0 0 0 350px;
+  margin: 0 0 0 372px;
+  width: 500px;
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
 }
 
 #searchSubmit {
  padding: 10px;
  border: none;
+ margin-left: 10px;
+ width: 150px;
+ background-color: transparent;
+ color: #F2E9F3;
 }
 
 /* RESULT AREA */
 
 .results {
   display: flex;
-  flex-flow: row wrap;
-  margin-top: 2rem;
+  flex-flow: row wrap; 
   box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 2rem 4rem 0 4rem;
 }
 
 .profile {
+  justify-content: center;
   align-items: center;
-  
+  box-sizing: border-box;
+  margin: 10px;
 }
 
 .songTitle {
   height: 20px;
   color: white;
   text-transform: uppercase;
+  font-size: 10px;
+  background-color: #252527;
+  text-align: center;
+  max-width: 75%;
 }
 
 .artistName {
   height: 20px;
   color: white;
   text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  background-color: #252527;
+  max-width: 75%;
 }
 
 .albumCover {
-  height: 200px;
-  width: 200px;
-  margin: 10px;
+  height: 175px;
+  width: 175px;
+  margin: 2px;
 }

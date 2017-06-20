@@ -30,10 +30,14 @@ const attachListener = function() {
 
 // 3. Create your `fetch` request that is called after a submission
 function getMusic() {
+results.innerHTML = "";
   event.preventDefault();
   var searchText = document.querySelector("#inputArea").value;
   console.log("searchText: ", searchText);
   console.log("clicked");
+
+
+
   axios.get(BASE_URL + BASE_QUERY + searchText + API_KEY).then(function(data) {
     var trackSelected = data.data;
     for (var i = 0; i < trackSelected.length; i++) {
@@ -54,19 +58,19 @@ function createTrackProfile(trackConfig) {
   profile.classList.add("profile");
   results.appendChild(profile);
 
-  var artwork = document.createElement("div");
+  var artwork = document.createElement("img");
   artwork.classList.add("albumCover");
   artwork.style.background =
     "url(" + trackConfig.artwork_url + ") no-repeat center center";
   artwork.style.backgroundSize = "cover";
   profile.appendChild(artwork);
 
-  var songTitle = document.createElement("div");
+  var songTitle = document.createElement("p");
   songTitle.classList.add("songTitle");
   songTitle.textContent = trackConfig.title;
   profile.appendChild(songTitle);
 
-  var artistName = document.createElement("div");
+  var artistName = document.createElement("p");
   artistName.classList.add("artistName");
   artistName.textContent = trackConfig.user.username;
   profile.appendChild(artistName);
