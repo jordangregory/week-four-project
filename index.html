@@ -8,24 +8,27 @@
 </head>
 
 <body>
+  <div class="titleHeader">
+    <h1>What Would You Like To Hear?</h1>
+  </div>
   <div class="container">
-    <header>
-      <h1>Play with my List</h1>
-    </header>
-    <section class="player">
+
+
+    <div class="player">
       <audio class="music-player" autoplay="autoplay" controls="controls" src=""></audio>
-    </section>
-    <section class="search">
+    </div>
+
+    <div class="search">
       <form class="search-form">
         <input type="text" id="inputArea" placeholder="Type in your favorite artist...">
-        <button id="searchSubmit">did you find it?
-        </button>
+        <button id="searchSubmit">did you find it?</button>
       </form>
-    </section>
-    <section id="results" class="results">
+    </div>
 
-    </section>
   </div>
+
+  <div id="results" class="results" />
+
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="main.js"></script>
 </body>

@@ -1,46 +1,45 @@
 html {
   height: 100%;
   width: 100%;
+  background: url("soundCloudprojectpic.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
 }
 
-header {
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #252527;
+  padding: 10px;
+}
+
+.titleHeader {
   text-align: center;
   font-family: 'Amatic SC', cursive;
-  color: #D1C8C4;
+  color: #d1c8c4;
   font-size: 50px;
 }
 
 h1 {
-  margin-bottom: 1px;
-}
-
-body {
-  background-color: gray;
-  background-image: url("soundCloudprojectpic.jpg");
-  background-size: cover;
-  background-repeat: repeat;
-  height: 100%;
-  width: 100%;
-}
-
-.music-player {
-  width: 50%;
-  padding-bottom: 3rem;
-  margin: 0 0 0 350px;
+  padding: 0;
 }
 
 .search {
   display: flex;
-  flex-wrap: wrap;
-}
-.search-form {
-  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-#inputArea {
-  flex: 1 50%;
-  margin: 0 0 0 372px;
-  width: 500px;
+.search-form {
+  display: flex;
+  flex-direction: column;
 }
 
 ::-webkit-input-placeholder {
@@ -48,13 +47,13 @@ body {
 }
 
 #searchSubmit {
-  padding: 10px;
+  background-color: transparent;
   border: none;
+  color: #f2e9f3;
+  font-size: 20px;
+  padding: 10px;
   margin-left: 10px;
   width: 150px;
-  background-color: transparent;
-  color: #F2E9F3;
-  font-size: 20px;
 }
 
 /* RESULT AREA */
@@ -76,7 +75,7 @@ body {
 }
 
 .songTitle {
-  color: #F2E9F3;
+  color: #f2e9f3;
   text-transform: uppercase;
   font-size: 26px;
   background-color: #252527;
@@ -87,7 +86,7 @@ body {
 }
 
 .artistName {
-  color: #F2E9F3;
+  color: #f2e9f3;
   text-transform: uppercase;
   font-size: 30px;
   text-align: center;
