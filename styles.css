@@ -115,3 +115,97 @@ h1 {
   width: 175px;
   margin: 2px;
 }
+
+@media screen and (max-width: 375px) {
+  .search {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #inputArea {
+    height: 100px;
+    width: 600px;
+    margin-top: 10px;
+  }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+    /* font-size: 45px; */
+  }
+
+  #searchSubmit {
+    background-color: rgba(37, 37, 39, 0.5);
+    border: none;
+    color: #f2e9f3;
+    font-size: 20px;
+    padding: 10px;
+    align-self: center;
+    height: 100px;
+    width: 600px;
+    font-size: 50px;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(37, 37, 39, 0.5);
+    /* padding: 50px; */
+    width: 100%;
+  }
+  /* RESULTS AREA - RESPONSIVE */
+
+  .results {
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: row wrap; */
+    box-sizing: border-box;
+    font-family: sans-serif;
+    margin: 2rem 4rem 0 4rem;
+  }
+
+  .profile {
+    /* flex: 1 25%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .songTitle {
+    color: #f2e9f3;
+    text-transform: uppercase;
+    font-size: 55px;
+    background-color: rgba(37, 37, 39, 0.5);
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-family: 'Amatic SC', cursive;
+  }
+
+  .artistName {
+    color: #f2e9f3;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgba(37, 37, 39, 0.5);
+    margin: 0;
+    padding: 10px;
+    font-family: 'Amatic SC', cursive;
+  }
+
+  .albumCover {
+    height: 375px;
+    width: 375px;
+    margin: 2px;
+  }
+}
