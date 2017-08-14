@@ -9,6 +9,13 @@ html {
   color: white;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   display: flex;
   flex-flow: row wrap;
@@ -17,6 +24,7 @@ html {
   align-items: center;
   background: rgba(37, 37, 39, 0.5);
   padding: 10px;
+  width: 25%;
 }
 
 .titleHeader {
@@ -42,6 +50,12 @@ h1 {
   flex-direction: column;
 }
 
+#inputArea {
+  height: 25px;
+  width: 294px;
+  margin-top: 10px;
+}
+
 ::-webkit-input-placeholder {
   text-align: center;
 }
@@ -52,7 +66,7 @@ h1 {
   color: #f2e9f3;
   font-size: 20px;
   padding: 10px;
-  margin-left: 10px;
+  align-self: center;
   width: 150px;
 }
 
